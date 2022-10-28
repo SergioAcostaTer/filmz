@@ -59,7 +59,7 @@ const MovieDetails = () => {
           <li className="overview">{details.overview}</li>
         </ul>
 
-        <Comments id={id} />
+        <Comments id={id}/>
         
       </div>
       <Footer/> 
