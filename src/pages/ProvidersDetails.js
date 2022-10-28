@@ -15,7 +15,6 @@ const ProviderDetail = () => {
   const [pic, setPic] = useState();
   const [prov, setProv] = useState();
 
-
   const providers = [
     {
       name: "Netflix",
@@ -39,7 +38,7 @@ const ProviderDetail = () => {
       name: "Hulu",
       src: hulu,
       color: "cyan",
-      prov: "hulu"
+      prov: "hulu",
     },
     {
       name: "Disney Plus",
@@ -59,7 +58,7 @@ const ProviderDetail = () => {
     for (let i = 0; i < providers.length; i++) {
       if (name === providers[i].name) {
         setPic(providers[i].src);
-        setProv(providers[i].prov)
+        setProv(providers[i].prov);
       }
     }
   }, []);
