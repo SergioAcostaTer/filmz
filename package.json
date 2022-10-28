@@ -2,9 +2,6 @@
   "name": "zonapelicula",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://filmzone-sergio.herokuapp.com/",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
