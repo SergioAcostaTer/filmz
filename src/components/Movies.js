@@ -11,12 +11,13 @@ const Movies = () => {
         console.log(JSON.parse(localStorage.trend) === [])
         const movies = await getTrendMoviesPics("day")
         setMainMovies(movies)
+        console.log(movies)
         localStorage.trend = JSON.stringify(movies);
       }
       if (localStorage.trend) {
         // console.log(localStorage.trend)
         setMainMovies(JSON.parse(localStorage.trend));
-      }
+      } 
     }
     fetchData()
   }, []); //eslint-disable-line

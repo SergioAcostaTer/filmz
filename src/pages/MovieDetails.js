@@ -17,13 +17,12 @@ const MovieDetails = () => {
     fetchData();
   }, []); //eslint-disable-line
 
-  console.log(details);
+  // console.log(details);
 
 
   return (
     <>
       <Header></Header>
-      {console.log(details)}
       <div className="global-container">
         <div className="film-container">
           <div>
