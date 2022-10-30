@@ -6,14 +6,19 @@ const Movies = () => {
   const [mainMovies, setMainMovies] = useState([]);
 
   useEffect(() => {
-    // if (!localStorage.trend || JSON.parse(localStorage.trend) === []) {
-      getTrendMoviesPics("day").then((result) => setMainMovies(result));
-    //   localStorage.trend = JSON.stringify(mainMovies);
-    // }
-    // if (localStorage.trend) {
-    //   // console.log(localStorage.trend)
-    //   setMainMovies(JSON.parse(localStorage.trend));
-    // }
+    async function fetchData(){
+      if (!localStorage.trend || JSON.parse(localStorage.trend).length === 0) {
+        console.log(JSON.parse(localStorage.trend) === [])
+        const movies = await getTrendMoviesPics("day")
+        setMainMovies(movies)
+        localStorage.trend = JSON.stringify(movies);
+      }
+      if (localStorage.trend) {
+        // console.log(localStorage.trend)
+        setMainMovies(JSON.parse(localStorage.trend));
+      }
+    }
+    fetchData()
   }, []); //eslint-disable-line
 
   return (
