@@ -17,7 +17,9 @@ const Comments = ({ id }) => {
     <>
       <h1 className="commments-title">Comments Section</h1>
       <ul className="comment-ul">
-        {comments.length > 0 ? (
+        {comments.length > 0 
+        ?
+        (
           comments
             .filter((e) => e.content.length < 1000)
             .map((e) => (
