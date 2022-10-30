@@ -7,7 +7,7 @@ const Movies = () => {
 
   useEffect(() => {
     async function fetchData(){
-      if (!localStorage.trend || JSON.parse(localStorage.trend).length === 0) {
+      if (!localStorage.trend) {
         console.log(JSON.parse(localStorage.trend) === [])
         const movies = await getTrendMoviesPics("day")
         setMainMovies(movies)
